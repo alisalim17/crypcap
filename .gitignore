@@ -1,0 +1,28 @@
+*.log
+dist/
+node_modules/
+# .env
+.env.local
+.env.prod
+.next/
+# *.lock
+
+*.log
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+.vercel
+
+# Local Netlify folder
+.netlify
+netlify
+
+out*
+expo/*
+
+# tailwind css for production
+prod.css

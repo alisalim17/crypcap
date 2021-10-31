@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "cryp",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "build": "lerna run build --scope={@abb/controller,@abb/common,@abb/web,@abb/server}"
+  },
+  "dependencies": {
+    "lerna": "^4.0.0"
+  }
+}
