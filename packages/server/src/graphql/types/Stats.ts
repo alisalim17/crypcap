@@ -1,8 +1,6 @@
 import { Field, ObjectType } from "type-graphql";
 
-@ObjectType({
-  isAbstract: true,
-})
+@ObjectType()
 export class Stats {
   @Field()
   totalCoins!: number;

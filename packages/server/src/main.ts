@@ -3,7 +3,7 @@ import { buildSchema } from "type-graphql";
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
 import http from "http";
-import { StatsResolver } from "./graphql/resolvers/StatsResolver";
+import { StatsResolver, CoinHistoryResolver } from "./graphql/resolvers";
 
 const PORT = process.env.PORT || 4000;
 
@@ -12,8 +12,9 @@ export async function main() {
   const httpServer = http.createServer(app);
   const server = new ApolloServer({
     schema: await buildSchema({
-      resolvers: [StatsResolver],
+      resolvers: [StatsResolver, CoinHistoryResolver],
       validate: false,
+      dateScalarMode: "timestamp", // "timestamp" or "isoDate"
     }),
   });
 
